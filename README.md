@@ -2,7 +2,7 @@
 *Brief Analysis of Wiley OA with Streamlit Visualizations.*
 ---
 
-This project aims to provide actionable intelligence for contract negotiation with Wiley. Analysis performed on article data to determine extent of open access availability, scope, and frequencies.
+This project aims to provide actionable intelligence for contract negotiation with Wiley. Analysis performed on article data to determine extent of open access availability, scope, and frequencies. Deployed via [Streamlit](https://share.streamlit.io/andjmorrison/wiley_analysis/main/app.py).
 
 #### Data Source:
 1. Article data from Web of Science
