@@ -42,12 +42,11 @@ def main():
         * Streamlit: Interface
 
         #### Analysis
-        * [x]  Trend versus seasonality
-        * [x]  Trend *and* seasonality
         * [x]  Categorical
-        -- ML
-        * [x]  Regression
+        * [x]  Time Series
+        * [x]  Trend *and* seasonality
         * [x]  Time Series Analysis
+        * [x]  Regression
 
         ''')
 
@@ -57,7 +56,7 @@ def main():
     plot_bar_oa = st.sidebar.checkbox('Open Access Categories', False)
     plot_bar_oaev = st.sidebar.checkbox('Open Access Evidence', True)
 
-    st.sidebar.text('Seasonality & Time')
+    st.sidebar.text('Time Series')
     plot_line_m = st.sidebar.checkbox('Articles Published by Month', False)
     plot_line_q = st.sidebar.checkbox('Articles Published by Quarter', False)
     option_yhat_sarimax = st.sidebar.checkbox('Articles Published Projection (SARIMAX)', False)
