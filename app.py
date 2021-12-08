@@ -366,14 +366,19 @@ def main():
                 marker = {'color':'black'},
                 name='Actual',))
 
-        fig_reg.update_layout(yaxis_range=[-15, pred_max])
+        fig_reg.update_layout(yaxis_range=[-15, 400], xaxis_range=[-15,400], title='U2 x Z9 Regressions<br><i>Sklearn</i>',)
 
-        scores = str([f'Model: {x["model"]}, Score: {round(x["score"], 6)}' for x in results])
+        # scores = str([f'Model: {x["model"]}, Score: {round(x["score"], 6)}' for x in results])
+        scores = [{'Model': x["model"], 'Score': round(x["score"], 6)} for x in results]
+
+        fig = px.scatter(df[['U2','Z9']],x='U2',y='Z9',trendline='ols')
+        fig.update_layout(title='U2 x Z9 Linear Regression<br><i>Plotly</i>')
 
         # render
         st.markdown('#### Regressions')
         st.plotly_chart(fig_reg)
-        st.caption(scores)
+        st.dataframe(pd.DataFrame(scores))
+        st.plotly_chart(fig)
         st.markdown('---')
         st.markdown('#### Data')
         st.dataframe(df[['U2','Z9']], width=800)
