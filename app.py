@@ -372,7 +372,7 @@ def main():
         scores = [{'Model': x["model"], 'Score': round(x["score"], 6)} for x in results]
 
         fig = px.scatter(df[['U2','Z9']],x='U2',y='Z9',trendline='ols')
-        fig.update_layout(title='U2 x Z9 Linear Regression<br><i>Plotly</i>')
+        fig.update_layout(title='U2 x Z9 OLS Linear Regression<br><i>Plotly</i>')
 
         # render
         st.markdown('#### Regressions')
