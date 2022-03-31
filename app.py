@@ -373,7 +373,6 @@ def main():
 
         fig_reg.update_layout(yaxis_range=[-15, 400], xaxis_range=[-15,400], title='U2 x Z9 Regressions<br><i>Sklearn</i>',)
 
-        # scores = str([f'Model: {x["model"]}, Score: {round(x["score"], 6)}' for x in results])
         scores = [{'Model': x["model"], 'Score': round(x["score"], 6)} for x in results]
 
         fig = px.scatter(df[['U2','Z9']],x='U2',y='Z9',trendline='ols')
