@@ -73,11 +73,17 @@ def main():
 
         # files
         path_dir = '.'
+        print(os.getcwd())
         files = [x for x in os.listdir(path_dir) if x.endswith('.csv')]
+        print('files: ', files)
+        file_oa = files[[idx for idx, s in enumerate(files) if 'OA' in s][0]]
+        file_art = files[[idx for idx, s in enumerate(files) if 'Article' in s][0]]
 
         # df setup
-        df_article = pd.read_csv(files[0])
-        df_oa = pd.read_csv(files[1])
+        df_article = pd.read_csv(file_art)
+        df_oa = pd.read_csv(file_oa)
+
+        print(df_oa.keys())
 
         # perform merge on DOI
         df = pd.merge(left=df_article, right=df_oa, 
