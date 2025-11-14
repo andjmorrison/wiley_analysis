@@ -1,9 +1,9 @@
-ephem==4.1.1
-numpy==1.21.2
-fbprophet==0.7.1
-pandas==1.3.4
-plotly==5.1.0
-pystan==2.19.1.1
-scikit-learn==1.0.1
+ephem
+numpy
+fbprophet
+pandas
+plotly
+pystan
+scikit-learn
 # statsmodels==0.12.0
-statsmodels==0.13.2
+statsmodels
