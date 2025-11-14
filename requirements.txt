@@ -1,6 +1,6 @@
 ephem
 numpy
-fbprophet
+prophet
 pandas
 plotly
 pystan
